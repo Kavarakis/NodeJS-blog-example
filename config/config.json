@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "pragmatio",
+    "password": "pragmatio",
+    "database": "agentparsedb",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "pragmatio",
+    "password": "pragmatio",
+    "database": "agentproDB",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "pragmatio",
+    "password": "pragmatio",
+    "database": "agentproDB",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
