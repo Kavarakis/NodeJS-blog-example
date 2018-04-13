@@ -1,10 +1,15 @@
+var Port = 5000;
+process.env.PORT = Port;
 var bodyParser = require('body-parser');
-var helmet = require('helmet');
+var passport = (require('./passport')).passport;
+const cors = require('cors');
+
 module.exports = function (app) {
-    app.use(helmet());
     app.use(bodyParser.urlencoded({
         extended: true,
     }));
     app.use(bodyParser.json());
-
+    app.use(cors());
+    app.options('*', cors());
+    app.use(passport.initialize());
 };

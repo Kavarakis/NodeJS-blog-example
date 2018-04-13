@@ -3,7 +3,7 @@
 module.exports = {
     index: {
         get(req, res) {
-            res.send('Hello Hanad and Semir');
+            res.send('Welcome to Blog Api');
         },
     },
 };

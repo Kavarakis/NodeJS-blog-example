@@ -1,12 +1,12 @@
 'use strict';
 
 /*******************
- * User Route
- * path: /user
+ * Comment Route
+ * path: /comment
  ******************** */
 
 let express = require('express');
-let Controller = require('../controllers/User/UserController');
+let Controller = require('../controllers/Comment/CommentController');
 let router = express.Router();
 
 router.post('/', Controller.create.post);

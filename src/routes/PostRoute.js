@@ -1,13 +1,13 @@
 'use strict';
 
 /*******************
- * User Route
- * path: /user
+ * Post Route
+ * path: /post
  ******************** */
 
-let express = require('express');
-let Controller = require('../controllers/User/UserController');
-let router = express.Router();
+let express    = require('express');
+let Controller = require('../controllers/Post/PostController');
+let router     = express.Router();
 
 router.post('/', Controller.create.post);
 router.get('/', Controller.all.get);
