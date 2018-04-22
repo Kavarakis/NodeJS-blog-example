@@ -22,7 +22,7 @@ module.exports = (req, res) => {
                     id: {
                         [Op.ne]: check.get('id')
                     }
-                }
+                };
 
                 models.User.findAll(specs).then((user) => {
 

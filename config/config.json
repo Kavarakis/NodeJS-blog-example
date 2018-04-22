@@ -11,7 +11,8 @@
     "password": "12345",
     "database": "blogdb",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "logging": false
   },
   "production": {
     "username": "semir",

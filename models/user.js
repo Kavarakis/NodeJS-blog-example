@@ -54,8 +54,8 @@ module.exports = (sequelize, DataTypes) => {
             validate: {
 
                 len: {
-                    args: [4, 20],
-                    msg: 'Password needs to be from 4 to 20 characters long.'
+                    args: [4, 200],
+                    msg: 'Password needs to be at least 4 characters long.'
                 },
             }
         },
@@ -75,6 +75,11 @@ module.exports = (sequelize, DataTypes) => {
     };
 
     User.beforeCreate('CreateHashingPassword', (model) => {
+
+        model.password = User.hashPassword(model.password);
+    });
+
+    User.beforeUpdate('HashUpdateModel', (model) => {
 
         model.password = User.hashPassword(model.password);
     });

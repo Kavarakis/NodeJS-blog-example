@@ -28,6 +28,7 @@ module.exports = (req, res) => {
                     res.status(201).json(response);
                 } else {
                     response.message = 'User is not created';
+                    response.user = null;                   
                     res.status(400).json(response);
                 }
             }).catch((err) => {
