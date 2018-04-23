@@ -8,7 +8,7 @@
 2. npm install
 3. npm start
 
-- Note: Sequelize CLI needs to be installed globally
+- Note: Sequelize CLI needs to be installed globally (Sequelize CLI [Node: 8.10.0, CLI: 3.2.0, ORM: 4.32.6] )
 ```
 npm install -g sequelize-cli
 ``` 
