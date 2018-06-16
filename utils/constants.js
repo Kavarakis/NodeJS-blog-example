@@ -6,5 +6,6 @@ module.exports = {
         route: `${path.dirname(require.main.filename)}/../src/routes`,
         controller: `${path.dirname(require.main.filename)}/../src/controllers`,
         model: `${path.dirname(require.main.filename)}/../src/models`,
+        root: `${path.dirname(require.main.filename)}`
     },
 };

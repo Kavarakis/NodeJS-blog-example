@@ -15,7 +15,6 @@ module.exports = (req, res) => {
 
     }];
     specs.where = null;
-
     if (!req.query.page && !req.query.limit) {
         //default
         req.query.limit = 20;

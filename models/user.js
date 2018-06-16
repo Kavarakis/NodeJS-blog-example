@@ -1,7 +1,7 @@
+'use strict';
 var bcrypt = require('bcrypt');
 const salt = bcrypt.genSaltSync();
 
-'use strict';
 
 module.exports = (sequelize, DataTypes) => {
     var User = sequelize.define('User', {

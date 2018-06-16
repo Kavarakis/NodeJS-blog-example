@@ -3,3 +3,4 @@ package.json
 node_modules/*
 migrations
 seeders
+/client/public/lib/*
