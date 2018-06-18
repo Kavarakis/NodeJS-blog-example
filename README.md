@@ -1,5 +1,5 @@
 # NodeJS-blog-example
-
+## **Note: Still in progress...**
 ##  **NodeJS + Express + Sequelize + PassportJS + Mocha + Chai + Bcrypt + ESlint + Babel**
 <br />
 
