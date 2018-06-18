@@ -14,7 +14,7 @@ module.exports = function (app, express) {
     app.options('*', cors());
     app.use(passport.initialize());
     app.use(express.static(
-        path.join(constants.root + '/client')
+        path.join(constants.root + '/public')
     ));
 
 };

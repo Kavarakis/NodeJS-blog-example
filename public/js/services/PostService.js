@@ -4,20 +4,20 @@ angular.module('mainApp')
 
         postService.getAll = () => {
             return $http.get('/api/post').then((response) => {
-                    return response.data.data.posts;
-                })
+                return response.data.data.posts;
+            })
                 .catch((err) => {
                     return err;
                 });
         };
         postService.getOne = (postId) => {
             return $http({
-                    url: ('/api/post/' + postId),
-                    method: "GET",
-                    params: {
-                        postId: postId
-                    }
-                })
+                url: ('/api/post/' + postId),
+                method: "GET",
+                params: {
+                    postId: postId
+                }
+            })
                 .then((response) => {
                     return response.data.post;
                 })
