@@ -1,8 +1,8 @@
 /* eslint-disable */
 'use strict'
-let apiPath = 'localhost:5000/api/'
+let apiPath = 'localhost:5000/api/';
 var mainApp = angular
-    .module('mainApp', ['ngRoute']);
+    .module('mainApp', ['ngRoute','controllers','services']);
 
 mainApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
 
@@ -10,21 +10,9 @@ mainApp.config(['$routeProvider', '$locationProvider', function ($routeProvider,
         templateUrl: 'views/home.html',
         controller: 'HomeController'
     });
-    $routeProvider.when('/login', {
-        templateUrl: '/views/login.html',
-        controller: 'LoginController'
-    });
     $routeProvider.when('/user', {
         templateUrl: 'views/user.html',
         controller: 'UserController'
-    });
-    $routeProvider.when('/post/:postId', {
-        templateUrl: 'views/post.html',
-        controller: 'PostController'
-    });
-    $routeProvider.when('/posts', {
-        templateUrl: 'views/posts.html',
-        controller: 'PostsController'
     });
     $routeProvider.otherwise({
         redirectTo: '/'

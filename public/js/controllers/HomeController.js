@@ -1,14 +1,26 @@
 angular
-    .module('mainApp')
-    .controller('HomeController', ['$scope', '$location', '$http', 'PostService',
-        function ($scope, $location, $http, PostService) {
-            $scope.message = 'Welcome to Simple Blog App!';
-            $scope.ChangeView = function () {
-                $location.url('login');
-            };
+    .module('HomeCtrl',['services','angular-storage'])
+    .controller('HomeController',['$scope','$location','$http','loginService','$timeout','authService',
+        function ($scope, $location, $http, loginService,$timeout,authService) {
+            $scope.welcomeMessage = 'Welcome to Simple Blog App!';
+            $scope.message = false;
             $scope.posts = [];
-            PostService.getAll().then((result) => {
-                $scope.posts = result;
-            });
+            $scope.submitForm = function(isValid) {
+                // check to make sure the form is completely valid
+
+                if (isValid) {
+                    loginService.login($scope.user.email,$scope.user.password)
+                        .then((result)=>{
+                           $scope.message = result.data.message.msg;
+                           if(result.status === 200){
+                               $timeout(function() {
+                                   authService.setToken(result.data.token);
+                                   $location.path('user');
+                               }, 1500);
+                           }
+                        });
+                }
+            };
         }
-    ]);
+        ]
+    );

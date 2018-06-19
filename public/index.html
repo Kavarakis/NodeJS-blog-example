@@ -2,28 +2,35 @@
 <html>
 
 <head>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script src="lib/a0-angular-storage/dist/angular-storage.min.js"></script>
+    <script src="lib/angular-jwt/dist/angular-jwt.min.js"></script>
 
     <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
-    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/lib/angular/angular.min.js"></script>
-    <script src="/lib/angular-route/angular-route.min.js"></script>
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <base href="/">
-    <script src="/app.js"></script>
+
     <!--
  SERVICES   
 -->
-    <script src="/js/services/PostService.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/services/authService.js"></script>
+    <script src="/js/services/postService.js"></script>
+    <script src="/js/services/loginService.js"></script>
+    <script src="js/services/userService.js"></script>
+
     <!--
 CONTROLLERS
 -->
     <script src="/js/controllers/MainController.js"></script>
     <script src="/js/controllers/HomeController.js"></script>
-    <script src="/js/controllers/LoginController.js"></script>
     <script src="/js/controllers/UserController.js"></script>
-    <script src="/js/controllers/PostController.js"></script>
-    <script src="/js/controllers/PostsController.js"></script>
+    <script src="js/controllers.js"></script>
     <!-- CSS -->
+    <script src="/app.js"></script>
     <link rel="stylesheet" href="/app.css">
 </head>
 
@@ -36,7 +43,7 @@ CONTROLLERS
             aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div ng-show="navbar" collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav  mr-auto">
             <li class="nav-item">
                 <a class="nav-link" href="#">Users</a>

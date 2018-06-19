@@ -1,0 +1,19 @@
+{
+  "name": "blog_example",
+  "description": "Starter project",
+  "main": "app.js",
+  "authors": [
+    "Semir Salkic"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Kavarakis/NodeJS-blog-example",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib/",
+    "test",
+    "tests"
+  ]
+}

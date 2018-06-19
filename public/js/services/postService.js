@@ -1,6 +1,6 @@
-angular.module('mainApp')
+angular.module('services')
     .factory('PostService', ['$http', '$q', function ($http) {
-        var postService = {};
+        let postService = {};
 
         postService.getAll = () => {
             return $http.get('/api/post').then((response) => {
