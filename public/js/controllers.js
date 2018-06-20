@@ -3,6 +3,7 @@ angular
         [
             'MainCtrl',
             'UserCtrl',
-            'HomeCtrl'
+            'HomeCtrl',
+            'RegisterCtrl'
         ]
     );

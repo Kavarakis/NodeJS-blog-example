@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="page-header text-center">
+        <h1>Register Page</h1>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <form name="registerForm" ng-submit="submitForm(registerForm.$valid)" novalidate>
+                <div class="form-group">
+                    <label class="label label-default" for="userName">Name:</label>
+                    <input autofocus required type="text" ng-minlength="4" ng-model="user.name" class="form-control" id="userName" name="userName"
+                        placeholder="Name">
+                    <span ng-show="registerForm.userName.$invalid && !registerForm.userName.$pristine" class="my-1 help-block label label-info">Enter a valid name.</span>
+                </div>
+                <div class="form-group">
+                    <label class="label label-default" for="userSurname">Surname:</label>
+                    <input required type="text" ng-minlength="4" ng-model="user.surname" class="form-control" id="userSurname" name="userSurname"
+                        placeholder="Surname">
+                    <span ng-show="registerForm.userSurname.$invalid && !registerForm.userSurname.$pristine" class="my-1 help-block label label-info">Enter a valid surname.</span>
+                </div>
+                <div class="form-group">
+                    <label class="label label-default" for="userEmail">Email:</label>
+                    <input autofocus required type="email" ng-model="user.email" class="form-control" id="userEmail" name="userEmail" placeholder="Email">
+                    <span ng-show="registerForm.userEmail.$invalid && !registerForm.userEmail.$pristine" class="my-1 help-block label label-info">Enter a valid email.</span>
+                </div>
+                <div class="form-group">
+                    <label class="label label-default" for="userPassword">Password:</label>
+                    <input required type="password" ng-minlength="4" ng-model="user.password" class="form-control" id="userPassword" name="userName"
+                        placeholder="Password">
+                    <span ng-show="registerForm.userName.$invalid && !registerForm.userName.$pristine" class="my-1 help-block label label-info">Enter a valid password.</span>
+                </div>
+                <button type="submit" id="updateBtn" class="btn btn-primary btn-block" ng-disabled="registerForm.$invalid">Register</button>
+                <div ng-show="message" class="alert alert-info">
+                    <strong>Message: </strong>
+                    {{message}}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

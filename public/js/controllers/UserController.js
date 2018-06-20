@@ -2,6 +2,7 @@ angular.module('UserCtrl', ['services', 'angular-storage'])
     .controller('UserController', [
             '$scope', 'store', 'userService',
             function ($scope, store, userService) {
+                
                 $scope.user = false;
                 $scope.message = false;
                 $scope.token = store.get('jwt');
