@@ -11,9 +11,15 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "public/lib/",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "angular": "^1.7.2",
+    "angular-route": "^1.7.2",
+    "angular-jwt": "^0.1.10",
+    "a0-angular-storage": "^0.0.15",
+    "jquery": "^3.3.1"
+  }
 }
