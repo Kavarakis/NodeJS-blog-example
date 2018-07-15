@@ -2,65 +2,22 @@
 <html>
 
 <head>
-    <script src="lib/angular/angular.min.js"></script>
-    <script src="lib/angular-route/angular-route.min.js"></script>
-    <script src="lib/a0-angular-storage/dist/angular-storage.min.js"></script>
-    <script src="lib/angular-jwt/dist/angular-jwt.min.js"></script>
-    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
-    <script src="lib/jquery/dist/jquery.js"></script>
-    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Blog Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="/">
-
-    <!--
- SERVICES   
--->
-    <script src="js/services.js"></script>
-    <script src="js/services/authService.js"></script>
-    <script src="/js/services/postService.js"></script>
-    <script src="/js/services/loginService.js"></script>
-    <script src="js/services/userService.js"></script>
-
-    <!--
-CONTROLLERS
--->
-    <script src="/js/controllers/MainController.js"></script>
-    <script src="/js/controllers/HomeController.js"></script>
-    <script src="/js/controllers/UserController.js"></script>
-    <script src="/js/controllers/RegisterController.js"></script>
-    <script src="js/controllers.js"></script>
-    <!-- CSS -->
-    <script src="/app.js"></script>
-    <link rel="stylesheet" href="/app.css">
+    <script src="dist/bundle.js"></script>
 </head>
 
-<body ng-app="mainApp" ng-controller="MainController" ng-cloak>
-
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="/">Blog Example</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div ng-show="navbar" class ="collapse navbar-collapse " id="navbarNav ">
-        <ul class="navbar-nav mr-auto ">
-            <li class="nav-item ">
-                <a class="nav-link " href="# ">Users</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link " ng-href="/posts ">Posts</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link " href="# ">Comments</a>
-            </li>
-        </ul>
+<body ng-app="app">
+    <div>
+        <h1>Hello World!</h1>
     </div>
-</nav>
-<div class="container-fluid ng-cloak ">
     <ng-view>
-        <!-- angular templating -->
-        <!-- this is where content will be injected -->
+        <!-- ROUTE LOADING -->
     </ng-view>
-</div>
 </body>
 
 </html>

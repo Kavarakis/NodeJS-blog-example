@@ -4,3 +4,4 @@ node_modules/*
 migrations
 seeders
 public/lib/*
+public/*

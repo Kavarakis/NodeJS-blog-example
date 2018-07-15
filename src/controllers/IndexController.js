@@ -4,7 +4,7 @@ module.exports = {
     index: {
         get(req, res) {
 
-            res.sendFile(constants.root + '/client/index.html');
+            res.sendFile(constants.root + '/public/index.html');
         },
     },
 };
